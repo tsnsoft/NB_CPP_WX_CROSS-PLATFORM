@@ -44,8 +44,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=`wx-config --cxxflags` 
-CXXFLAGS=`wx-config --cxxflags` 
+CCFLAGS=`/usr/local/bin/wx-config --cxxflags` 
+CXXFLAGS=`/usr/local/bin/wx-config --cxxflags` 
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -62,7 +62,7 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nb_cpp_wx_cross-platform: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nb_cpp_wx_cross-platform ${OBJECTFILES} ${LDLIBSOPTIONS} `wx-config --libs`
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nb_cpp_wx_cross-platform ${OBJECTFILES} ${LDLIBSOPTIONS} `/usr/local/bin/wx-config --libs`
 
 ${OBJECTDIR}/controls.o: controls.cpp
 	${MKDIR} -p ${OBJECTDIR}

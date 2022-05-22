@@ -14,14 +14,14 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=x86_64-w64-mingw32-gcc
-CCC=x86_64-w64-mingw32-g++
-CXX=x86_64-w64-mingw32-g++
+CC=gcc
+CCC=g++
+CXX=g++
 FC=gfortran
-AS=x86_64-w64-mingw32-ar
+AS=as
 
 # Macros
-CND_PLATFORM=cross_windows-Linux
+CND_PLATFORM=GNU-Linux
 CND_DLIB_EXT=so
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -44,8 +44,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=`/usr/x86_64-w64-mingw32/bin/wx-config --cxxflags` 
-CXXFLAGS=`/usr/x86_64-w64-mingw32/bin/wx-config --cxxflags` 
+CCFLAGS=`/usr/local/bin/wx-config --cxxflags` 
+CXXFLAGS=`/usr/local/bin/wx-config --cxxflags` 
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -62,7 +62,7 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nb_cpp_wx_cross-platform: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nb_cpp_wx_cross-platform ${OBJECTFILES} ${LDLIBSOPTIONS} `/usr/x86_64-w64-mingw32/bin/wx-config --libs`  --static
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nb_cpp_wx_cross-platform ${OBJECTFILES} ${LDLIBSOPTIONS} `/usr/local/bin/wx-config --libs`
 
 ${OBJECTDIR}/controls.o: controls.cpp
 	${MKDIR} -p ${OBJECTDIR}
